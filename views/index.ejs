@@ -1,0 +1,10 @@
+<%- include('header', {name: name}); %>
+<!-- <div>The sudoku submitted is not valid</div> -->
+<form action="/index" method="POST">
+    <div class="change">
+        <%- include('sudoku', {table: table, ids: ids,  disable: ""}) %>
+        <img id = "sudoku-img" src = <%= dest %> />
+    </div>
+    <input class="Submit" type="submit" value="Submit">
+</form>
+<%- include('footer') %>

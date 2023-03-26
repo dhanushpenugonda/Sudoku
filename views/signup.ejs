@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SignUp</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="formBox">
+        <form action="/signup" method="POST" onsubmit="return validate()">
+            <h1>Sign Up</h1>
+            <input class="formInput" name="name" type="text" placeholder="Name">
+            <input class="formInput" name="username" type="text" placeholder="Username">
+            <input class="formInput" name="password" type="password" placeholder="Password">
+            <input class="formInput" name="repassword" type="password" placeholder="Re-enter Password">
+            <button name="submit" type="submit">Create Account!</button>
+            </div>                        
+        </form>
+    </div> 
+    <script>
+    function validate(){
+        var pancardid = document.getElementsByName("name")[0];
+        var usernameid = document.getElementsByName("username")[0];
+        var passwordid = document.getElementsByName("password")[0];
+        var repasswordid = document.getElementsByName("repassword")[0];
+        var pstr = passwordid.value.trim();
+        var pantr = pancardid.value.trim();
+        if(pancardid.value.trim()==""){
+            window.alert("Blank Pancard Number");
+            return false;
+        }
+        else if(usernameid.value.trim()==""){
+            window.alert("Blank Username");
+            return false;
+        }
+        else if(passwordid.value.trim()==""){
+            window.alert("Blank Password");
+            return false;                
+        }
+        else if(repasswordid.value.trim()==""){
+            window.alert("Blank Re-enter Password");
+            return false;
+        }
+        else if(passwordid.value.trim()!=repasswordid.value.trim()){
+            window.alert("Password Doesn't match");
+            return false;
+        }
+        else if(pstr.length<5){
+            window.alert("Password is very weak");
+            return false;
+        }
+    }
+    </script>       
+</body>
+</html>

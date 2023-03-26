@@ -1,0 +1,23 @@
+<%- include('header', {name: name}); %>
+<form method="POST"> 
+    <%- include('sudoku', {table: table, ids: ids, disable: ""}) %>
+    <input formaction="/generate" class="Submit" type="submit" value="See the Solution&gt;&gt;">
+    <input formaction="/save" class="Submit" type="submit" value="Save">
+</form>
+<%- include('footer') %>
+
+<script>
+    for (var i = 0; i < 9; i++) {
+        for (var j =0; j < 9; j++) {
+            if (document.getElementsByName("cell"+String(i)+String(j))[0].value != ""){
+                document.getElementsByName("cell"+String(i)+String(j))[0].readOnly = true;
+                // document.getElementsByName("cell"+String(i)+String(j))[0].style.fontWeight = "bold";
+            }
+            else{
+                document.getElementsByName("cell"+String(i)+String(j))[0].readOnly = false;
+                document.getElementsByName("cell"+String(i)+String(j))[0].style.color = "#777";
+            }
+        }
+    }
+
+</script>

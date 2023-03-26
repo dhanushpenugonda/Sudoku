@@ -1,0 +1,184 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	/* font-family: "Montserrat", sans-serif; */
+	font-family: "McLaren", cursive;
+}
+body {
+	background: #ddd;
+	padding: 0;
+}
+a{ 
+    text-decoration: none;
+}
+  
+header {
+	background-color: black;
+	margin: auto;
+	padding: 16px 40px;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header div {
+    float: right;
+}
+  
+header div a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    margin: 12px 10px;
+    text-decoration: none;
+}
+header h1{
+    display: inline;
+}
+h1 {
+	color: #fff;
+	/* font-family: "McLaren", cursive; */
+	font-weight: 200;
+}
+form h1{
+    text-align: center;
+    margin: 20px 0;
+}
+#formBox{
+    width: 300px;
+    margin: 50px auto;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid white;
+    background: black;
+    backdrop-filter: blur(8px);
+    
+}
+.formInput{
+    width: 100%;
+    padding: 5px 0;
+    margin: 20px 0;
+    border: 0;
+    border-bottom: 1px solid #444;
+    background: transparent;
+    color: white;
+}
+
+button{
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 4px;
+    width: 50%;
+    margin: 20px auto;
+    justify-content: center;
+    display: block;
+    background-color: #fff;
+    cursor: pointer;
+}
+  
+footer {
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;
+}
+  
+footer p {
+	color: #ccc;
+}
+.change{
+    margin: 20px;
+}
+.Sudoku{
+    float: left;
+    background-color: black;
+    margin: 10px;
+    padding: 2px 3.5px;
+    /* display: inline-block; */
+}
+
+.Box{
+    display: inline-block;
+    margin: 1px 1.5px;
+}
+.Cell{
+    border: 1px solid gray;
+    margin : -.5px -3px;
+    background-color: black;
+    display: inline-block;
+}
+.Cell input{
+    font-size: 20px;
+    border: None;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.Cell input:focus{
+    outline: none;
+}
+#sudoku-img{
+    margin: 10px;
+    height: 280px;
+    float: left;
+}
+
+.container {  
+    width: 100%;  
+    height: 300px;
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}
+.Submit {
+    background-color: black;
+    margin: 20px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    border-radius: 4px;
+}
+.Submit:hover{
+    cursor: pointer;
+}
+
+.dragBox {
+    width: 400px;
+    height: 150px;
+    margin: 20px;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    line-height: 145px;
+    color: #999;
+    border: 2px dashed #ccc;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+.dragBox input[type="file"] {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+.draging {
+    transform: scale(1.1);
+}
+#preview {
+    margin: 20px 0 20px 20px;
+}
+#preview img {
+    max-width: 400px;
+}

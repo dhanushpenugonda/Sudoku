@@ -1,0 +1,31 @@
+<%- include('header', {name: name}); %>
+
+<form action="/file-upload" method="POST" enctype="multipart/form-data">
+    <div class="uploadOuter">
+        <span class="dragBox" >
+            Drag and Drop image here
+        <input type="file" name="photo" onChange="dragNdrop(event)"  ondragover="drag()" ondrop="drop()" id="uploadFile"  />
+        </span>
+        <div id="preview"></div>
+    </div>
+    <input class="Submit" type="submit" value="Upload">
+</form>
+<%- include('footer') %>
+
+<script>
+
+function dragNdrop(event) {
+    var fileName = URL.createObjectURL(event.target.files[0]);
+    var preview = document.getElementById("preview");
+    var previewImg = document.createElement("img");
+    previewImg.setAttribute("src", fileName);
+    preview.innerHTML = "";
+    preview.appendChild(previewImg);
+}
+function drag() {
+    document.getElementById('uploadFile').parentNode.className = 'draging dragBox';
+}
+function drop() {
+    document.getElementById('uploadFile').parentNode.className = 'dragBox';
+}
+</script>

@@ -1,0 +1,30 @@
+<%- include('header', {name: name}); %>
+<%- include('sudoku', {table: table, ids: ids, disable: "readonly"}) %>
+<a href=<%= goback %> ><input class="Submit" type="button" value="&gt;Go Back"></a>
+<%- include('footer') %>
+
+
+<script>
+    for (var i = 0; i < 9; i++) {
+        for (var j =0; j < 9; j++) { 
+            var q = '<%= q %>';
+            var sol = '<%= sol %>';
+            var semi = '<%= semi %>';
+            q = q.split(',');
+            sol = sol.split(',');
+            semi = semi.split(',');
+            if (q[9*i+j] != sol[9*i+j]){
+                if (sol[9*i+j] == semi[9*i+j] || semi[9*i+j] == 0)
+                    document.getElementsByName("cell"+String(i)+String(j))[0].style.color = "green";
+                else
+                    document.getElementsByName("cell"+String(i)+String(j))[0].style.color = "red";
+            }
+            else
+                document.getElementsByName("cell"+String(i)+String(j))[0].style.color = "black";
+            if(semi[9*i+j] != q[9*i+j] && sol[9*i+j] == semi[9*i+j]) 
+                document.getElementsByName("cell"+String(i)+String(j))[0].style.fontWeight = "bold";
+            // if(q[9*i+j] != 0)
+                // document.getElementsByName("cell"+String(i)+String(j))[0].style.fontWeight = "bold";
+        }
+    }
+</script>

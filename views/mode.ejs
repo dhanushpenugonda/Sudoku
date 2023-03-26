@@ -1,0 +1,9 @@
+<%- include('header', {name: name}); %>
+<div class="container">
+<form action="/mode" method="POST">
+    <input class="Submit" name="easy" type="submit" value="Easy">
+    <input class="Submit" name="medium" type="submit" value="Medium">
+    <input class="Submit" name="hard" type="submit" value="Hard">
+</form>
+</div>
+<%- include('footer') %>

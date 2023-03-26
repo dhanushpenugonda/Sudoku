@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="formBox">
+        <form action="/login" method="POST" onsubmit="return validation()">
+            <h1>LOGIN</h1>
+            <input class="formInput" type="text" name="username" placeholder="Username">
+            <input class="formInput" type="password" name="password" placeholder="Password">
+            <button type="submit">Submit</button>  
+        </form>
+        <a href="/signup"><button type="submit">Sign Up!</button></a>
+    </div>
+    <script>
+        function validation(){
+            var user = document.getElementsByName("username")[0];
+            let pwd = document.getElementsByName("password")[0];
+            var pstr = pwd.value.trim();
+            if(user.value.trim()==""){
+                window.alert("Blank Username");
+                return false;
+            }
+            else if(pwd.value.trim()==""){
+                window.alert("Blank Password")
+                return false;
+            }
+            else if(pstr.length<5){
+                document.getElementById("invalidPass").style.visibility="visible";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

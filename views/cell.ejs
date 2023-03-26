@@ -1,0 +1,8 @@
+<div class="Cell">
+    <% if (value !== 0) { %>
+        <input type="text" maxLength="1" name=<%= "cell"+id[0]+id[1] %> <%= disable %> value=<%= value %> />
+    <% } else { %>
+        <input type="text" maxLength="1" name=<%= "cell"+id[0]+id[1] %> <%= disable %>/>
+    <% } %>
+    <!-- <input type="text" name="cellid" value=<%= "cell"+id[0]+id[1] %> style="display : none;"/> -->
+</div>

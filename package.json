@@ -1,0 +1,24 @@
+{
+  "name": "sudoku-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dhanush Penugonda",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.3.2",
+    "child_process": "^1.0.2",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "formidable": "^2.1.1",
+    "fs": "^0.0.1-security",
+    "mongoose": "^6.9.0",
+    "multer": "^1.4.5-lts.1",
+    "path": "^0.12.7",
+    "sessionstorage": "^0.1.0",
+    "spawner": "^0.0.1"
+  }
+}
